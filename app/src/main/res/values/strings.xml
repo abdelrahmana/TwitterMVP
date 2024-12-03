@@ -1,11 +1,13 @@
 <resources>
-    <string name="app_name">WeatherForcasting</string>
-    <string name="warning_you_are_offline">Warning you \'re in offline mode and the data is not up to date.</string>
+    <string name="app_name">LocalNotification</string>
     <string name="error_happened">There is an error happened please try again</string>
     <string name="city">City</string>
     <string name="no_data">Couldn\'t fetch data</string>
     <string name="retry">Retry</string>
-    <string name="temp">temp: %s</string>
-    <string name="pressure">pressure: %s</string>
-    <string name="weather_desc">weather: %s</string>
+    <string name="estimated_time">Time: %s</string>
+    <string name="details">Details</string>
+    <string name="cancel">Cancel</string>
+    <string name="schdeular">Schedule this notification</string>
+    <string name="cancel_all">Cancel all</string>
+    <string name="home">Home</string>
 </resources>

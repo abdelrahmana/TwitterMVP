@@ -1,11 +1,8 @@
 package com.example.weatherforcasting.di
 
-import com.banquemisr.challenge05.data.source.remote.CityEndPoint
-import com.banquemisr.challenge05.data.source.remote.WeatherEndPoint
-import com.example.weatherforcasting.data.cititesrepo.CitiesRepo
-import com.example.weatherforcasting.data.cititesrepo.CityRepoImplementer
-import com.example.weatherforcasting.data.cititesrepo.WeatherRepo
-import com.example.weatherforcasting.data.cititesrepo.WeatherRepoImplementer
+import com.banquemisr.challenge05.data.source.remote.LocalEndPoint
+import com.example.weatherforcasting.data.cititesrepo.LocalNotification
+import com.example.weatherforcasting.data.cititesrepo.LocalRepoImplementer
 import com.example.weatherforcasting.data.source.AppDataBase
 import dagger.Module
 import dagger.Provides
@@ -20,15 +17,9 @@ import dagger.hilt.android.components.ViewModelComponent
 class RepoDi {
     @Provides
     fun getRepoWeather(
-        localDataBase: AppDataBase, endPoints: WeatherEndPoint
-    ): WeatherRepo {
-        return  WeatherRepoImplementer(localDataBase,endPoints)
-    }
-    @Provides
-    fun getRepoCity(
-        localDataBase: AppDataBase, endPoints: CityEndPoint
-    ): CitiesRepo {
-        return  CityRepoImplementer(localDataBase,endPoints)
+        localDataBase: AppDataBase, endPoints: LocalEndPoint
+    ): LocalNotification {
+        return  LocalRepoImplementer(endPoints)
     }
 
 

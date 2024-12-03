@@ -1,6 +1,6 @@
 package com.example.weatherforcasting.di
 
-import com.banquemisr.challenge05.data.source.remote.WeatherEndPoint
+import com.banquemisr.challenge05.data.source.remote.LocalEndPoint
 import com.example.weatherforcasting.BuildConfig
 import com.example.weatherforcasting.data.Constants.API_KEY_K
 import com.example.weatherforcasting.data.Constants.API_VALUE
@@ -19,6 +19,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.converter.scalars.ScalarsConverterFactory
 import java.util.concurrent.TimeUnit
 
 
@@ -38,9 +39,9 @@ object NetworkModule {
     }
     @Provides
     @ViewModelScoped
-    fun getAuthEndPoints(): WeatherEndPoint {
+    fun getAuthEndPoints(): LocalEndPoint {
             return provideEndPoints(provideRetrofitBuilder()).create(
-            WeatherEndPoint::class.java
+            LocalEndPoint::class.java
         )
     }
     @Provides
@@ -68,8 +69,9 @@ object NetworkModule {
         return Retrofit.Builder()
             .client(client)
             .baseUrl(BuildConfig.baseUrlWeather)
-            .addConverterFactory(GsonConverterFactory.create(gson))
+            .addConverterFactory(ScalarsConverterFactory.create())
             .addCallAdapterFactory(CoroutinesResponseCallAdapterFactory())
+            .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
           //  .create(EndPoints::class.java)
     }

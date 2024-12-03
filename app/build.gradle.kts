@@ -27,13 +27,11 @@ android {
 
     buildTypes {
         debug {
-            buildConfigField("String", "baseUrlWeather", value = "\"https://api.openweathermap.org/data/\"");
-            buildConfigField("String", "baseUrlCities", value = "\"https://dev-orcas.s3.eu-west-1.amazonaws.com/\"");
+            buildConfigField("String", "baseUrlWeather", value = "\"https://lynxapp.com/\"");
 
         }
         release {
-            buildConfigField("String", "baseUrlCities", value = "\"https://dev-orcas.s3.eu-west-1.amazonaws.com/\"");
-            buildConfigField("String", "baseUrlWeather", value = "\"https://api.openweathermap.org/data/\"");
+            buildConfigField("String", "baseUrlWeather", value = "\"https://lynxapp.com/\"");
 
             isMinifyEnabled = false
             proguardFiles(
@@ -72,6 +70,9 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.core.ktx)
     implementation(libs.androidx.junit.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -108,4 +109,6 @@ dependencies {
     implementation("com.wang.avi:library:2.1.3")
     implementation("androidx.navigation:navigation-fragment-ktx:2.3.1")
     implementation("androidx.navigation:navigation-ui-ktx:2.3.1")
+    implementation ("com.squareup.retrofit2:converter-scalars:2.9.0")
+
 }

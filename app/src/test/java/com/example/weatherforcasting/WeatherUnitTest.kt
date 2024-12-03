@@ -1,11 +1,8 @@
 package com.example.weatherforcasting
 
-import androidx.room.Room
-import androidx.test.core.app.ApplicationProvider
-import com.banquemisr.challenge05.data.source.remote.WeatherEndPoint
-import com.example.weatherforcasting.data.cititesrepo.WeatherRepo
-import com.example.weatherforcasting.data.cititesrepo.WeatherRepoImplementer
-import com.example.weatherforcasting.data.model.City
+import com.banquemisr.challenge05.data.source.remote.LocalEndPoint
+import com.example.weatherforcasting.data.cititesrepo.LocalNotification
+import com.example.weatherforcasting.data.cititesrepo.LocalRepoImplementer
 import com.example.weatherforcasting.data.source.AppDataBase
 import com.example.weatherforcasting.data.source.local.WeatherDao
 import com.example.weatherforcasting.data.source.local.dao.CityDao
@@ -26,12 +23,12 @@ import org.mockito.MockitoAnnotations
 class WeatherUnitTest {
     private lateinit var database: AppDataBase
     @Mock
-    private lateinit var weatherService: WeatherEndPoint
+    private lateinit var weatherService: LocalEndPoint
     @Mock
     private lateinit var cityDao: CityDao
     @Mock
     private lateinit var weatherDao: WeatherDao
-    lateinit var weatherRepo: WeatherRepo
+    lateinit var weatherRepo: LocalNotification
     @Before
     fun setUp() {
        /* database = Room.inMemoryDatabaseBuilder(
@@ -40,7 +37,7 @@ class WeatherUnitTest {
         ).allowMainThreadQueries().build()*/
         MockitoAnnotations.openMocks(this)
         database = Mockito.mock(AppDataBase::class.java)
-        weatherRepo = WeatherRepoImplementer(database,weatherService)
+        weatherRepo = LocalRepoImplementer(database,weatherService)
 
         cityDao = database.cityDao()
     }
