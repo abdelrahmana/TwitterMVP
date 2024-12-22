@@ -6,8 +6,18 @@
     android:id="@+id/navigation.xml">
     <fragment
         android:id="@+id/nav_weather"
-        android:name="com.example.weatherforcasting.ui.list.LocalNotificationFragment"
+        android:name="com.example.twitter.ui.twitter.TwitterFragment"
         android:label="weather"
-        tools:layout="@layout/local_notification_fragment" />
+        tools:layout="@layout/twitter_fragment">
+        <action
+            android:id="@+id/action_twitter_get_code"
+            app:destination="@id/twitter_get_code" />
+    </fragment>
 
+    <fragment
+        android:id="@+id/twitter_get_code"
+        android:name="com.example.twitter.ui.twitterauth.TwitterAuthGetCodeFragment"
+        android:label="weather"
+        tools:layout="@layout/fragment_twitter_auth_get_code">
+    </fragment>
 </navigation>

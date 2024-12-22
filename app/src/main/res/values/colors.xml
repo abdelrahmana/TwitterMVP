@@ -9,4 +9,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="blue_color">#3223B6</color>
     <color name="card_color">#F9F9F9</color>
+    <color name="new_black">#1C211F</color>
+    <color name="light_gray">#F6F6F6</color>
+    <color name="green">#00A970</color>
+    <color name="red">#DC0125</color>
+    <color name="sky_color">#03A9F4</color>
 </resources>

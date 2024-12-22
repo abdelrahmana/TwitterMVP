@@ -1,13 +1,17 @@
 <resources>
-    <string name="app_name">LocalNotification</string>
+    <string name="app_name">TwitterCounter</string>
     <string name="error_happened">There is an error happened please try again</string>
-    <string name="city">City</string>
     <string name="no_data">Couldn\'t fetch data</string>
-    <string name="retry">Retry</string>
-    <string name="estimated_time">Time: %s</string>
-    <string name="details">Details</string>
     <string name="cancel">Cancel</string>
-    <string name="schdeular">Schedule this notification</string>
-    <string name="cancel_all">Cancel all</string>
-    <string name="home">Home</string>
+    <string name="twitter_count">Twitter character count</string>
+    <string name="charactersType">Characters Typed</string>
+    <string name="characters_remaining">Characters Remaining</string>
+    <string name="hint_text">Start typing! You can enter up to 280 characters</string>
+    <string name="copy_text">Copy Text</string>
+    <string name="clear">Clear Text</string>
+    <string name="post_tweet">Post tweet</string>
+    <string name="current_edit_text">%d/%d</string>
+    <string name="text_copied">Text copied to clipboard</string>
+    <string name="tweet_posted_successfully">Tweet is Posted Successfully</string>
+    <!-- TODO: Remove or change this placeholder text -->
 </resources>

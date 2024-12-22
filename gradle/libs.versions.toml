@@ -9,6 +9,9 @@ lifecycleRuntimeKtx = "2.8.6"
 activityCompose = "1.9.3"
 composeBom = "2024.04.01"
 constraintlayout = "2.1.4"
+rxbindingWidget = "4.0.0"
+twitter = "3.3.0"
+twitter4jCore = "4.0.7"
 workRuntimeKtx = "2.9.1"
 coreKtxVersion = "1.6.1"
 junitKtx = "1.2.1"
@@ -38,6 +41,9 @@ androidx-junit-ktx = { group = "androidx.test.ext", name = "junit-ktx", version.
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+rxbinding-widget = { module = "com.jakewharton.rxbinding4:rxbinding-widget", version.ref = "rxbindingWidget" }
+twitter = { module = "com.twitter.sdk.android:twitter", version.ref = "twitter" }
+twitter4j-core = { module = "org.twitter4j:twitter4j-core", version.ref = "twitter4jCore" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

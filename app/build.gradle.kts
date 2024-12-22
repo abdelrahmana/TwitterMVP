@@ -27,11 +27,11 @@ android {
 
     buildTypes {
         debug {
-            buildConfigField("String", "baseUrlWeather", value = "\"https://lynxapp.com/\"");
+            buildConfigField("String", "baseUrl", value = "\"https://api.twitter.com/\"");
 
         }
         release {
-            buildConfigField("String", "baseUrlWeather", value = "\"https://lynxapp.com/\"");
+            buildConfigField("String", "baseUrl", value = "\"https://api.twitter.com/\"");
 
             isMinifyEnabled = false
             proguardFiles(
@@ -110,5 +110,11 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.3.1")
     implementation("androidx.navigation:navigation-ui-ktx:2.3.1")
     implementation ("com.squareup.retrofit2:converter-scalars:2.9.0")
+    //implementation ("com.jakewharton.rxbinding4:rxbinding:4.0.0")
+    implementation ("com.jakewharton.rxbinding2:rxbinding:2.2.0")
+    //implementation (libs.rxbinding.widget)
+    implementation (libs.twitter4j.core)
+    implementation (libs.twitter)
+
 
 }
